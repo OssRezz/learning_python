@@ -317,6 +317,209 @@ Si en la consola escribimos python, este ya nos permite usar el interprete de Py
     ```
     El resultado que va a retornar es: ['Ir al hotel', 'Pedir un nuevo', 'Comer HB', 'Pedir un taxi de nuevo', 'Entrar la habitación del hotel', 'Ir por el avión']
 
+## Matrices en Python (Array multidimencional)
+
+- Para crear un array multimecional debemos tener la sgt estructura
+
+    ```
+    ArrayNumero = [
+        [1,2,3],
+        [4,5,6],
+        [7,8,9],
+    ]
+    ```
+
+- 
+
+
+## Tupla en Python
+
+- Las tupas son inmutables, una vez creada no e puede modificar, pero si dentro de esta tenemos una lista, si podemos modificar la lista
+
+- Para crear una tupla en Python, debemos tener la sgt estructura
+
+    ```
+    numbers = (1,2,3,4,5,6)
+    print(numbers)
+    ```
+
+- Para acceder a un valor de una tupla
+
+    ```
+    numbers = (1,2,3,4,5,6)
+    print(numbers[0])
+    ```
+
+## Diccionario en Python
+
+- Son una estructura que almacenan dos datos, clave y valor. Es como un objecto de JavaScript
+
+- Para crear un diccionario debemos tener la sgt estructura:
+
+    ```
+    config = {
+        "url" : "https://www.hola.com",
+        "key" : "123asdashdgasd",
+        "username" : "Prueba",
+        "password" : "12345",
+    }
+    ```
+
+- Si queremos acceder a un valor dentro de un diccionario, ponemos la clave:
+
+    ```
+    config = {
+        "url" : "https://www.hola.com",
+        "key" : "123asdashdgasd",
+        "username" : "Prueba",
+        "password" : "12345",
+    }
+
+    #Para acceder a un valor
+    print(config["url"])
+    ```
+    
+    El valor que este va a retornar es: https://www.hola.com
+
+- Para eliminar un elemento dentro del array, usamos del
+
+    ```
+    config = {
+        "url" : "https://www.hola.com",
+        "key" : "123asdashdgasd",
+        "username" : "Prueba",
+        "password" : "12345",
+    }
+
+    #Para eliminar un valor de un diccionario
+    del config["username"]
+    print(config)
+    ```
+
+
+- Para obtener las claves de un diccionario, usamos keys()
+
+    ```
+    config = {
+        "url" : "https://www.hola.com",
+        "key" : "123asdashdgasd",
+        "username" : "Prueba",
+        "password" : "12345",
+    }
+
+    #Obtener las claves dentro de un diccionario
+    claves = config.keys()
+    print(claves)
+    ```
+    El valor a retornar es de la clase dict_keys
+
+- Para obtener los valores de un diccionario, usamos values()
+
+    ```
+    config = {
+        "url" : "https://www.hola.com",
+        "key" : "123asdashdgasd",
+        "username" : "Prueba",
+        "password" : "12345",
+    }
+
+    #Obtener las claves dentro de un diccionario
+    claves = config.keys()
+    print(claves)
+    ```
+
+    Esto nos va a retonar los valores con la clase dict_values
+
+- Para separar los valores de un diccionario, usamos items()
+
+    ```
+    config = {
+        "url" : "https://www.hola.com",
+        "key" : "123asdashdgasd",
+        "username" : "Prueba",
+        "password" : "12345",
+    }
+
+    #Si queremos separar los valores de un diccionario
+    items =  config.items()
+    print(items)
+    ```
+
+    Esto nos va a retonar los valores dentro de una lista separado por tuplas
+
+## Estructuras condicionales
+
+- La sintaxis de un if en python es:
+
+    ```
+    x = True
+    if x :
+        print("Verdadero")
+    ```
+
+    Debemos tener en cuenta la identación del codigo, una vez entramos al if, debemos hacer un tab a la derecha
+
+    Si queremos salir del if, volvemos al nivel de identación del if
+
+- Else en Python
+
+    ```
+    x = False
+    if x :
+        print("Verdadero")
+    else :
+        print("Falso")
+    ```
+
+- Else if en Python
+
+    ```
+    x = 5
+
+    if x > 7:
+        print("Mayor")
+    elif x == 5 :
+        print("Es igual")
+    else :
+        print("Menor")
+    ```
+- Logica dentro de un if con operados logicos 
+
+    - And
+
+        ```
+        x = 5
+
+        if x > 7 and x < 10:
+            print("Mayor de 7 y menor de 8")
+        elif x > 4 and x < 7 :
+            print("Mayor de 5 y menor de 7")
+        else :
+            print("No se encuentra dentro de los rangos")
+        ```
+
+    - Or
+
+        ```
+        x = 9
+        y = 21
+
+        if x > 10 or y < 20 :
+            print("X es mayor de 10 o Y es menor de 20")
+        else :
+            print("No esta dentro del rango")
+        ```
+
+    - Not (Negación)
+
+        ```
+        is_user = True
+        if not is_user :
+            print("No es usuario")
+        else :
+            print("Es usuario")
+        ```
+
 
 ## Funciones en Python
 
@@ -383,6 +586,60 @@ Si en la consola escribimos python, este ya nos permite usar el interprete de Py
 
     Resultado: El resultado ingresado
 
+- max, nos permite obtener el numero mayor de una lista de numero
+  
+    ```
+    numbers = [1,2,3,4,5,6,7,8,9,10]
+
+    #Obtener el numero mayor
+    print("Elemento mayor: ", max(numbers))
+    ```
+
+    Resultado: 10
+
+- min, nos permite obtener el numero menor de una lista de numero
+  
+    ```
+    numbers = [1,2,3,4,5,6,7,8,9,10]
+
+    #Obtener el numero menor
+    print("Elemento min: ", min(numbers))
+    ```
+
+    Resultado: 1
+
+- del, nos permite eliminar un datos de una lista
+  
+    ```
+    numbers = [1,2,3,4,5,6,7,8,9,10]
+
+    #Eliminar elementos de una lista
+    del numbers[0]
+    print(numbers)
+    ```
+
+    Resultado: [2,3,4,5,6,7,8,9,10]
+
+    Si no indexo un item, podemos eliminar todos los items
+
+- id, me permite ver cual es el id que memoria de la lista
+
+    ```
+    #Para conocer el id en memoria de una lista, usamos id
+
+    a = [1,2,3,4,5]
+    b = a
+
+    del a[0]
+
+    print(id(a))
+    print(id(b))
+    ```
+
+    En este caso de uso tanto a como b, al eliminar una posicion estos valores se registran en el mismo espacio de memoria por lo tanto lo mejor que podemos hacer un slice b = a[:] (Copia el array en un nuevo espacio de memoria)
+
+
+
 ## Metodos en Python
 
 - lower, nos permite volver un string a minuscula
@@ -425,7 +682,6 @@ Si en la consola escribimos python, este ya nos permite usar el interprete de Py
     #Agregar un item a una lista
     to_do.append("Ir por el avión")
     print(to_do)
-    ]
     ```
 
 - insert, nos permite agregar un item en una posición deseada
