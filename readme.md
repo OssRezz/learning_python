@@ -457,9 +457,9 @@ if x :
     print("Verdadero")
 ```
 
-    Debemos tener en cuenta la identación del codigo, una vez entramos al if, debemos hacer un tab a la derecha
+Debemos tener en cuenta la identación del codigo, una vez entramos al if, debemos hacer un tab a la derecha
 
-    Si queremos salir del if, volvemos al nivel de identación del if
+Si queremos salir del if, volvemos al nivel de identación del if
 
 ### Else en Python
 
