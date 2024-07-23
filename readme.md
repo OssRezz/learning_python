@@ -449,79 +449,195 @@ Si en la consola escribimos python, este ya nos permite usar el interprete de Py
 
 ## Estructuras condicionales
 
-- La sintaxis de un if en python es:
+### La sintaxis de un if en python
 
-    ```
-    x = True
-    if x :
-        print("Verdadero")
-    ```
+```
+x = True
+if x :
+    print("Verdadero")
+```
 
     Debemos tener en cuenta la identación del codigo, una vez entramos al if, debemos hacer un tab a la derecha
 
     Si queremos salir del if, volvemos al nivel de identación del if
 
-- Else en Python
+### Else en Python
 
-    ```
-    x = False
-    if x :
-        print("Verdadero")
-    else :
-        print("Falso")
-    ```
+```
+x = False
+if x :
+    print("Verdadero")
+else :
+    print("Falso")
+```
 
-- Else if en Python
+### Else if en Python
 
-    ```
-    x = 5
+```
+x = 5
 
-    if x > 7:
-        print("Mayor")
-    elif x == 5 :
-        print("Es igual")
-    else :
-        print("Menor")
-    ```
-- Logica dentro de un if con operados logicos 
+if x > 7:
+    print("Mayor")
+elif x == 5 :
+    print("Es igual")
+else :
+    print("Menor")
+```
+    
+### Logica dentro de un if con operados logicos 
 
-    - And
+#### And
 
-        ```
-        x = 5
+```
+x = 5
 
-        if x > 7 and x < 10:
-            print("Mayor de 7 y menor de 8")
-        elif x > 4 and x < 7 :
-            print("Mayor de 5 y menor de 7")
-        else :
-            print("No se encuentra dentro de los rangos")
-        ```
+if x > 7 and x < 10:
+    print("Mayor de 7 y menor de 8")
+elif x > 4 and x < 7 :
+    print("Mayor de 5 y menor de 7")
+else :
+    print("No se encuentra dentro de los rangos")
+```
 
-    - Or
+#### Or
 
-        ```
-        x = 9
-        y = 21
+```
+x = 9
+y = 21
 
-        if x > 10 or y < 20 :
-            print("X es mayor de 10 o Y es menor de 20")
-        else :
-            print("No esta dentro del rango")
-        ```
+if x > 10 or y < 20 :
+    print("X es mayor de 10 o Y es menor de 20")
+else :
+    print("No esta dentro del rango")
+```
 
-    - Not (Negación)
+#### Not (Negación)
 
-        ```
-        is_user = True
-        if not is_user :
-            print("No es usuario")
-        else :
-            print("Es usuario")
-        ```
+```
+is_user = True
+if not is_user :
+    print("No es usuario")
+else :
+    print("Es usuario")
+```
 
+#### In
+
+
+```
+if 1  in [1,2,3,4] :
+    print("Se encuentra dentro de la lista")
+else :
+    print("No se encuentra dentro de la lista")
+```
+
+## Iteraciones y bucles en python
+
+### Break y continue
+
+- Podemos usar break para detener la ejecución de un ciclo
+- Podemos usar continue para continuar con el proximo registro
+
+### For
+
+#### La sintaxis que tiene un for es la siguiente:
+
+```
+empleados = [
+    {
+        "nombre" : "James",
+        "email" : "James@asd.com",
+        "edad" : 28,
+    },
+]
+
+for empleado in empleados :
+    print("Nombre: ", empleado["nombre"], "email: ",  empleado["email"], "edad: ", empleado["edad"])
+    
+```
+
+#### Tambien podemos tener un rango de interaciones
+
+
+For range, nos sirve para repetir un proceso N cantidad de veces escritas range
+
+```
+for i in range(10) : 
+    print(i)
+```
+
+### While
+
+Mientras se cumpla un condiccion vamos a entrar a while
+
+#### La sintaxis del while es la sgt
+
+```
+#While
+contador = 0
+while (len(empleados) - 1) > 0 and contador < len(empleados): 
+    contador = contador + 1
+    print(empleados[contador - 1])
+```
+
+### Iterador
+
+Los generadores e iteradores nos permite trabajar con grandes cantidad de informacion
+
+#### Iter 
+
+-Es una función me permite recorrer cada uno de los elementos sin utilizar indices
+
+Es una función del sistema, el sintaxis es:
+
+```
+#Lista
+my_list = [1, 2, 3, 4, 5, 6]
+
+#Obtener el iterador
+my_iter = iter(my_list)
+
+for number in my_iter :
+    print(number)
+```
+
+#### Generador
+
+Es una funcion, pero esa debe usar yield, la sintaxis es la sgt
+
+
+```
+def my_generator():
+    yield 1
+    yield 2
+    yield 3
+    
+for values in my_generator():
+    print(values)
+```
 
 ## Funciones en Python
+
+#### La sintaxis de las variables en Python es la sgt:
+
+```
+def Saludar(nombre):
+    print("Hola", nombre)
+    
+Saludar("James")
+```
+
+#### Podemos usar return para retornar información
+
+```
+def Saludar(nombre):
+    return "Hola " + nombre
+    
+print(Saludar("James"))
+```
+
+
+## Funciones propias de Python
 
 - type, nos dice que tipo de dato es el contenido de una variable
 
